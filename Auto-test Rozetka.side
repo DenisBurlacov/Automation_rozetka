@@ -522,6 +522,210 @@
       ],
       "value": "Тест Тест"
     }]
+  }, {
+    "id": "456aff97-60fe-4be5-8b0a-82a3054de67e",
+    "name": "Check user authorization with invalid data ",
+    "commands": [{
+      "id": "d5a4c625-b724-4df4-bfae-82d6db5c8f2e",
+      "comment": "Open the page",
+      "command": "open",
+      "target": "ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82c0244d-73e2-4a43-b88d-b44db0ed0216",
+      "comment": "Check that the element \"войдите в личный кабинет\" is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.header-topline__user-link",
+      "targets": [
+        ["css=.header-topline__user-link", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'войдите в личный кабинет')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "48d12ac2-88de-45e8-a946-17fdc53a9d66",
+      "comment": "Check that the text \"войдите в личный кабинет\" is displayed",
+      "command": "assertText",
+      "target": "css=.header-topline__user-link",
+      "targets": [
+        ["css=.header-topline__user-link", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'войдите в личный кабинет')]", "xpath:innerText"]
+      ],
+      "value": "войдите в личный кабинет"
+    }, {
+      "id": "faf336db-f8df-468d-aa50-371ac69e25be",
+      "comment": "Click at the \"Войдите в личный кабинет\" button",
+      "command": "clickAt",
+      "target": "css=.header-topline__user-link",
+      "targets": [
+        ["css=.header-topline__user-link", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'войдите в личный кабинет')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01928515-5659-45a9-b7dc-b2d50652e8da",
+      "comment": "Check that the \"Вход\" pop-up window is displayed ",
+      "command": "assertElementPresent",
+      "target": "css=.modal__content",
+      "targets": [
+        ["css=.modal__content", "css:finder"],
+        ["xpath=//single-modal-window/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0bad687-44f9-4ab4-bc21-d3996b9577bd",
+      "comment": "Check that the \"Эл. почта или телефон\" field is displayed",
+      "command": "assertElementPresent",
+      "target": "id=auth_email",
+      "targets": [
+        ["id=auth_email", "id"],
+        ["css=#auth_email", "css:finder"],
+        ["xpath=//input[@id='auth_email']", "xpath:attributes"],
+        ["xpath=//fieldset/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "83e29408-b28d-4749-9f53-67fe7c26a2fa",
+      "comment": "Check that the \"Пароль\" field is displayed",
+      "command": "assertElementPresent",
+      "target": "id=auth_pass",
+      "targets": [
+        ["id=auth_pass", "id"],
+        ["css=#auth_pass", "css:finder"],
+        ["xpath=//input[@id='auth_pass']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e103d5bb-e187-424f-b021-4a8027f16621",
+      "comment": "Check that the \"Войти\" button is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.auth-modal__submit",
+      "targets": [
+        ["css=.auth-modal__submit", "css:finder"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Войти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "731cfd03-a6ec-40bc-ad00-de0c9f1f8349",
+      "comment": "Check that the text \"Войти\" is displayed",
+      "command": "assertText",
+      "target": "css=.auth-modal__submit",
+      "targets": [
+        ["css=.auth-modal__submit", "css:finder"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Войти')]", "xpath:innerText"]
+      ],
+      "value": "Войти"
+    }, {
+      "id": "e1ad0357-590d-4837-8c88-f25a5be4417b",
+      "comment": "Check that the \"Эл. почта или телефон\" is editable",
+      "command": "assertEditable",
+      "target": "id=auth_email",
+      "targets": [
+        ["id=auth_email", "id"],
+        ["css=#auth_email", "css:finder"],
+        ["xpath=//input[@id='auth_email']", "xpath:attributes"],
+        ["xpath=//fieldset/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7daf2d0e-cdd3-4393-940a-7382b954c126",
+      "comment": "Click at the \"Эл. почта или телефон\" field",
+      "command": "clickAt",
+      "target": "id=auth_email",
+      "targets": [
+        ["id=auth_email", "id"],
+        ["css=#auth_email", "css:finder"],
+        ["xpath=//input[@id='auth_email']", "xpath:attributes"],
+        ["xpath=//fieldset/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8afb9741-a0ee-4c43-b838-c3b255b2ae5c",
+      "comment": "Fill the \"Эл. почта или телефон\" field",
+      "command": "type",
+      "target": "id=auth_email",
+      "targets": [
+        ["id=auth_email", "id"],
+        ["css=#auth_email", "css:finder"],
+        ["xpath=//input[@id='auth_email']", "xpath:attributes"],
+        ["xpath=//fieldset/div/input", "xpath:position"]
+      ],
+      "value": "fortesting8558@gmail.com"
+    }, {
+      "id": "3dd3f49b-84c4-4389-80dc-7671a2956ee2",
+      "comment": "Click at the \"Пароль\" field",
+      "command": "clickAt",
+      "target": "id=auth_pass",
+      "targets": [
+        ["id=auth_pass", "id"],
+        ["css=#auth_pass", "css:finder"],
+        ["xpath=//input[@id='auth_pass']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6241723a-d1c6-4282-bd41-9f78c86ba9fe",
+      "comment": "Click at the \"Войти\" button",
+      "command": "clickAt",
+      "target": "css=.auth-modal__submit",
+      "targets": [
+        ["css=.auth-modal__submit", "css:finder"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Войти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e73d05f-520c-4b42-8171-75f33161bcc2",
+      "comment": "Check that the  element \"Введен неверный пароль!\" error message is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.form__hint",
+      "targets": [
+        ["css=.form__hint", "css:finder"],
+        ["xpath=//fieldset/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7913979a-fd01-42f7-8ac6-60ebc483fa62",
+      "comment": "Check that the text \"Введен неверный пароль!\" error message is displayed",
+      "command": "assertText",
+      "target": "css=strong",
+      "targets": [
+        ["css=strong", "css:finder"],
+        ["xpath=//strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Введен неверный пароль!')]", "xpath:innerText"]
+      ],
+      "value": "Введен неверный пароль! "
+    }, {
+      "id": "7da4478e-579b-4323-83f7-2b081997776f",
+      "comment": "Check that the text \"Проверьте раскладку клавиатуры и Caps Lock\" error message is displayed",
+      "command": "assertText",
+      "target": "css=.form__row > p:nth-child(2)",
+      "targets": [
+        ["css=.form__row > p:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Проверьте раскладку клавиатуры и Caps Lock')]", "xpath:innerText"]
+      ],
+      "value": "Проверьте раскладку клавиатуры и Caps Lock"
+    }, {
+      "id": "9090a113-bacc-40ae-a95d-5f102bd2c01f",
+      "comment": "Check that the text \"Пришлите мне временный пароль на указанный адрес электронной почты\" error message is displayed",
+      "command": "assertText",
+      "target": "css=.form__row > p:nth-child(3)",
+      "targets": [
+        ["css=.form__row > p:nth-child(3)", "css:finder"],
+        ["xpath=//div[2]/div[2]/p[2]", "xpath:position"]
+      ],
+      "value": "Пришлите мне временный пароль на указанный адрес электронной почты"
+    }]
   }],
   "suites": [{
     "id": "820b8d54-1ec3-446b-9c57-5c3035854925",
