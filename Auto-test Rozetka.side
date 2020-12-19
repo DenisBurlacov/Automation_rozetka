@@ -1,0 +1,52 @@
+{
+  "id": "ec3f0f02-2a1d-4775-bfe7-6cbe37c350a5",
+  "version": "2.0",
+  "name": "Auto-test Rozetka",
+  "url": "https://rozetka.com.ua/",
+  "tests": [{
+    "id": "02584ce3-50ca-4a31-9a6e-b078905977fa",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "3344e5e8-b12e-4436-8baf-05d6c989e03c",
+    "name": "Check opening the web-site Rozetka",
+    "commands": [{
+      "id": "bbfeb863-387f-4525-8d13-c97e99c2bea6",
+      "comment": "",
+      "command": "open",
+      "target": "ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f69f1bc4-5909-4f8f-9234-f0123bddeb86",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.layout_with_sidebar",
+      "targets": [
+        ["css=.layout_with_sidebar", "css:finder"],
+        ["xpath=//app-rz-main-page/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c28c38a-a475-4843-bb58-4b790cfce8c4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.content",
+      "targets": [
+        ["css=.content", "css:finder"],
+        ["xpath=//main", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "820b8d54-1ec3-446b-9c57-5c3035854925",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["02584ce3-50ca-4a31-9a6e-b078905977fa"]
+  }],
+  "urls": ["https://rozetka.com.ua/"],
+  "plugins": []
+}
