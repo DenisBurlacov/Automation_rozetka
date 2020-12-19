@@ -38,6 +38,283 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "b78948ee-828d-4851-a2ba-80129fe92694",
+    "name": "Check registration with valid data",
+    "commands": [{
+      "id": "937b9944-1842-4d25-a215-c31b644a263f",
+      "comment": "Open the page",
+      "command": "open",
+      "target": "ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc5ca5b3-d9d2-4dec-9d20-70e48d7f7d6a",
+      "comment": "Check that the element \"войдите в личный кабинет\" is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.header-topline__user-link",
+      "targets": [
+        ["css=.header-topline__user-link", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'войдите в личный кабинет')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "70070782-7bbf-4867-9fea-f198bba7345e",
+      "comment": "Check that the text \"войдите в личный кабинет\" is displayed",
+      "command": "assertText",
+      "target": "css=.header-topline__user-link",
+      "targets": [
+        ["css=.header-topline__user-link", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'войдите в личный кабинет')]", "xpath:innerText"]
+      ],
+      "value": "войдите в личный кабинет"
+    }, {
+      "id": "23601611-b4fd-43b2-a590-e1d71de7581a",
+      "comment": "Click at the \"Войдите в личный кабинет\" button",
+      "command": "clickAt",
+      "target": "css=.header-topline__user-link",
+      "targets": [
+        ["css=.header-topline__user-link", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'войдите в личный кабинет')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "41288ab6-2478-4fc4-bd99-8f72c3f3c231",
+      "comment": "Check that the \"Вход\" pop-up window is displayed ",
+      "command": "assertElementPresent",
+      "target": "css=.modal__content",
+      "targets": [
+        ["css=.modal__content", "css:finder"],
+        ["xpath=//single-modal-window/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "101d5420-c10f-4ffe-8eb1-f480f3e690aa",
+      "comment": "Check that the \"Зарегистрироваться\" link is displayed",
+      "command": "assertText",
+      "target": "linkText=Зарегистрироваться",
+      "targets": [
+        ["linkText=Зарегистрироваться", "linkText"],
+        ["css=.auth-modal__register-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Зарегистрироваться')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://my.rozetka.com.ua/signup/')]", "xpath:href"],
+        ["xpath=//fieldset/div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Зарегистрироваться')]", "xpath:innerText"]
+      ],
+      "value": "Зарегистрироваться"
+    }, {
+      "id": "98c2775d-7e74-49f2-8cb4-ab65c859dce6",
+      "comment": "Click the \"Зарегистрироваться\" link",
+      "command": "clickAt",
+      "target": "linkText=Зарегистрироваться",
+      "targets": [
+        ["linkText=Зарегистрироваться", "linkText"],
+        ["css=.auth-modal__register-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Зарегистрироваться')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://my.rozetka.com.ua/signup/')]", "xpath:href"],
+        ["xpath=//fieldset/div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Зарегистрироваться')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "11f84577-89a6-4204-b0a1-72af0bb7e028",
+      "comment": "Check that the \"Вход\" pop-up window is displayed ",
+      "command": "assertElementPresent",
+      "target": "css=.modal__content",
+      "targets": [
+        ["css=.modal__content", "css:finder"],
+        ["xpath=//single-modal-window/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9381288e-f681-406c-bc39-216c7dbe3b6d",
+      "comment": "Check that the \"Фамилия\" field is editable",
+      "command": "assertEditable",
+      "target": "css=.ng-invalid:nth-child(2)",
+      "targets": [
+        ["css=.ng-invalid:nth-child(2)", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//fieldset/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fe9d4bc-937b-4041-8a0c-2e404f84a94a",
+      "comment": "Check that the \"Имя\" field is editable",
+      "command": "assertEditable",
+      "target": "css=.form__row > .ng-untouched",
+      "targets": [
+        ["css=.form__row > .ng-untouched", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//fieldset[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac781b00-9126-43bc-8bc9-8cb8b1b00c94",
+      "comment": "Check that the \"Эл. почта или телефон\" field is editable ",
+      "command": "assertEditable",
+      "target": "css=.ng-dirty:nth-child(2)",
+      "targets": [
+        ["css=.ng-dirty:nth-child(2)", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//fieldset[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b0a0f89-59fd-4f35-8076-cebfb365937d",
+      "comment": "Check that the \"Придумайте пароль\" field is editable ",
+      "command": "assertEditable",
+      "target": "css=.form__row_with_button > .ng-dirty",
+      "targets": [
+        ["css=.form__row_with_button > .ng-dirty", "css:finder"],
+        ["xpath=//input[@type='password']", "xpath:attributes"],
+        ["xpath=//fieldset[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be224ca9-dcf2-408b-99aa-039667265096",
+      "comment": "Click at \"Фамилия\" field",
+      "command": "clickAt",
+      "target": "css=.form__row > .ng-untouched",
+      "targets": [
+        ["css=.form__row > .ng-untouched", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//fieldset/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6211072f-11ad-4dd0-ba70-28e5d694bdc9",
+      "comment": "Fill the \"Фамилия\" field",
+      "command": "type",
+      "target": "css=.form__row:nth-child(1) > .ng-pristine",
+      "targets": [
+        ["css=.form__row:nth-child(1) > .ng-pristine", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//fieldset/input", "xpath:position"]
+      ],
+      "value": "Тест"
+    }, {
+      "id": "04945858-fe3d-4f4b-8dcb-74cf415d2952",
+      "comment": "Click at \"Имя\" field",
+      "command": "clickAt",
+      "target": "css=.form__row:nth-child(2) > .ng-pristine",
+      "targets": [
+        ["css=.form__row:nth-child(2) > .ng-pristine", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//fieldset[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "480c8d7e-4ce5-4d1a-97b6-7bf591f093ca",
+      "comment": "Fill the \"Имя\" field",
+      "command": "type",
+      "target": "css=.form__row:nth-child(2) > .ng-pristine",
+      "targets": [
+        ["css=.form__row:nth-child(2) > .ng-pristine", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//fieldset[2]/input", "xpath:position"]
+      ],
+      "value": "Тест"
+    }, {
+      "id": "018ab964-0877-469b-82ab-ff96ce327f64",
+      "comment": "Click at \"Эл. почта или телефон\" field",
+      "command": "clickAt",
+      "target": "css=.ng-dirty:nth-child(2)",
+      "targets": [
+        ["css=.ng-dirty:nth-child(2)", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//fieldset[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa899169-79ee-4b57-a20d-c7f3a0c30ea4",
+      "comment": "Fill the \"Эл. почта или телефон\" field",
+      "command": "type",
+      "target": "css=.js-contact > .ng-dirty",
+      "targets": [
+        ["css=.js-contact > .ng-dirty", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//fieldset[3]/input", "xpath:position"]
+      ],
+      "value": "fortesting8558@gmail.com"
+    }, {
+      "id": "1cf338b2-0fc5-4727-bfd5-096d396dcce8",
+      "comment": "Click at \"Придумайте пароль\" field",
+      "command": "clickAt",
+      "target": "css=.form__row_with_button > .ng-dirty",
+      "targets": [
+        ["css=.form__row_with_button > .ng-dirty", "css:finder"],
+        ["xpath=//input[@type='password']", "xpath:attributes"],
+        ["xpath=//fieldset[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da4b9321-daa2-4d93-b0f7-73508112c6d4",
+      "comment": "Fill the \"Придумайте пароль\" field",
+      "command": "type",
+      "target": "css=.form__row_with_button > .ng-dirty",
+      "targets": [
+        ["css=.form__row_with_button > .ng-dirty", "css:finder"],
+        ["xpath=//input[@type='password']", "xpath:attributes"],
+        ["xpath=//fieldset[4]/div/input", "xpath:position"]
+      ],
+      "value": "234Aa432"
+    }, {
+      "id": "9b84f3cb-6c88-4552-a4e3-6e8dc957a25a",
+      "comment": "Check that the element \"Зарегистрироваться\" is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.button_size_large",
+      "targets": [
+        ["css=.button_size_large", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Зарегистрироваться')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82afa93c-4c49-480a-b3b8-bd0f4a8f4c57",
+      "comment": "Check that the text \"Зарегистрироваться\" is displayed",
+      "command": "assertText",
+      "target": "css=.button_size_large",
+      "targets": [
+        ["css=.button_size_large", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Зарегистрироваться')]", "xpath:innerText"]
+      ],
+      "value": "Зарегистрироваться"
+    }, {
+      "id": "2f0508f5-02c5-4547-ae2f-bc76b4d501bc",
+      "comment": "Click the \"Зарегистрироваться\" button",
+      "command": "clickAt",
+      "target": "css=.button_size_large",
+      "targets": [
+        ["css=.button_size_large", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Зарегистрироваться')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f81d125-4cc4-49e6-a3a6-0bf950011525",
+      "comment": "Check that user is registered",
+      "command": "assertText",
+      "target": "linkText=Тест Тест",
+      "targets": [
+        ["linkText=Тест Тест", "linkText"],
+        ["css=.header-topline__user-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Тест Тест')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://rozetka.com.ua/cabinet/personal-information/')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Тест Тест')]", "xpath:innerText"]
+      ],
+      "value": "Тест Тест"
+    }]
   }],
   "suites": [{
     "id": "820b8d54-1ec3-446b-9c57-5c3035854925",
